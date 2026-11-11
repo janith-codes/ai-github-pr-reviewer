@@ -1,0 +1,31 @@
+{
+  "name": "ai-github-pr-reviewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered GitHub Pull Request reviewer",
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=20.9.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean",
+    "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,md,yml,yaml,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,mjs,json,md,yml,yaml,css}\"",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f postgres",
+    "db:generate": "pnpm --filter @ai-pr-reviewer/api db:generate",
+    "db:validate": "pnpm --filter @ai-pr-reviewer/api db:validate"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "prettier": "3.9.10",
+    "turbo": "2.11.10",
+    "typescript": "6.0.3"
+  }
+}
