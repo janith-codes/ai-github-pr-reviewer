@@ -1,0 +1,14 @@
+// Prisma schema for the AI GitHub PR Reviewer API.
+//
+// Connection details and migration paths live in `prisma.config.ts`.
+// Domain models are introduced in a later phase; this file intentionally
+// declares no models yet.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@ai-pr-reviewer/api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI GitHub PR Reviewer REST API",
+  "type": "module",
+  "scripts": {
+    "build": "nest build",
+    "dev": "nest start --watch",
+    "start": "node dist/main.js",
+    "lint": "eslint src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "node -e \"const fs=require('node:fs');for(const p of ['dist','tsconfig.tsbuildinfo'])fs.rmSync(p,{recursive:true,force:true})\"",
+    "db:generate": "prisma generate",
+    "db:validate": "prisma validate"
+  },
+  "dependencies": {
+    "@ai-pr-reviewer/shared": "workspace:*",
+    "@nestjs/common": "12.3.3",
+    "@nestjs/config": "12.1.0",
+    "@nestjs/core": "12.3.3",
+    "@nestjs/platform-express": "12.3.3",
+    "@nestjs/swagger": "12.1.0",
+    "@prisma/client": "7.10.1",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.15.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "12.0.11",
+    "@nestjs/schematics": "12.0.12",
+    "@types/express": "5.0.6",
+    "@types/node": "26.6.6",
+    "dotenv": "18.0.9",
+    "eslint": "9.39.5",
+    "prisma": "7.10.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1"
+  }
+}
