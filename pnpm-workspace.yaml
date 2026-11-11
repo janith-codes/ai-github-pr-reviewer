@@ -1,0 +1,10 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# Postinstall scripts are blocked unless listed here. Prisma needs to place its
+# query-engine binaries; Scarf is analytics-only and stays disabled.
+allowBuilds:
+  "@prisma/engines": true
+  prisma: true
+  "@scarf/scarf": false
